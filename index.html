@@ -835,7 +835,7 @@
     document.getElementById('nCat').textContent = n.cat;
     document.getElementById('nTitle').textContent = n.titulo;
     document.getElementById('nAvatar').src = document.getElementById('authorImg').src;
-    document.getElementById('nMeta').textContent = 'Publicado el ' + n.fecha + ' · Dr. Damián García';
+    document.getElementById('nMeta').innerHTML = '<strong class="font-bold text-ink">Dr. Damián García</strong> · Publicado el ' + n.fecha;
     const im = document.getElementById('nImg'); im.src = imgSrc(n.img); im.alt = n.alt;
     document.getElementById('nBody').innerHTML = n.cuerpo;
     const rel = NOTAS.filter(x => x.slug !== slug);
